@@ -1,0 +1,44 @@
+{
+    "compilerOptions": {
+        // 打包降级到什么程度
+        "target": "es5",
+        "module": "esnext",
+        // 是否严格模式
+        "strict": true,
+        // jsx 是否支持 什么支持方案
+        "jsx": "preserve",
+        "importHelpers": true,
+        "moduleResolution": "node",
+        // 是否检查node_modules 里面的类型
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        // 打包是否生成 sourceMap
+        "sourceMap": true,
+        "baseUrl": ".",
+        "types": [
+            "webpack-env"
+        ],
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        },
+        "lib": [
+            "esnext",
+            "dom",
+            "dom.iterable",
+            "scripthost"
+        ]
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "tests/**/*.ts",
+        "tests/**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
